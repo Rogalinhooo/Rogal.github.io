@@ -56,37 +56,69 @@
         <h2>Strona Główna</h2>
 		<img src="clicklik.png" alt="zaklady" style="width: 1300px; height: 1300px;">
         <p>Tutaj znajdziesz informacje o naszej firmie.</p>
-    </section><table>
-    <thead>
-        <tr>
-            <th>Gatunek</th>
-            <th>Tytuł filmu</th>
-            <th>Rok produkcji</th>
-            <th>Ocena (1-10)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="1">Dramat, Komedia</td>
-            <td>Forrest Gump</td>
-            <td>1994</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td rowspan="3">Akcja, Science-Fiction</td>
-            <td>Matrix</td>
-            <td rowspan="3">1999</td>
-            <td>9</td>
-        </tr>
-        <tr>
-            <td>Matrix Reaktywacja</td>
-            <td rowspan="4">8</td>
-        </tr>
-        <tr>
-            <td>Matrix Rewolucje</td>
-        </tr>
-    </tbody>
-</table>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela z kolorowymi komórkami i zaokrąglonymi bokami</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #e5e5e5;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nagłówek 1</th>
+                <th>Nagłówek 2</th>
+                <th>Nagłówek 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Zawartość 1</td>
+                <td>Zawartość 2</td>
+                <td>Zawartość 3</td>
+            </tr>
+            <tr>
+                <td>Zawartość 4</td>
+                <td>Zawartość 5</td>
+                <td>Zawartość 6</td>
+            </tr>
+            <tr>
+                <td>Zawartość 7</td>
+                <td>Zawartość 8</td>
+                <td>Zawartość 9</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
     <footer>
         <p>&copy; 2023 Rogal Click</p>
         <p>Data: <span id="currentDate"></span></p>
