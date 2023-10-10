@@ -32,54 +32,59 @@
             padding: 20px;
         }
         footer {
-            background-color: #333;
+            background-color: #ffffff;
             color: white;
             text-align: center;
             padding: 10px;
         }
-	.wysrodkowanie {
-		text-align: center;
-	}
+        .videocontainer {
+            background: solid rgb(147, 135, 135);
+        }
+        .center-container {
+            text-align: center;
+        }
+        .dol {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <img src="rogalclick.png" alt="Logo Firmy" style="width: 0px; height: 0px;">
-        <h1>Moje Logo</h1>
-        <img src="rogalclick.png" alt="Zdjęcie" style="width: 300px; height: 200px;">
-        <p>Siema</p>
-    </header>
-<section id="video-container">
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JZBKm2BVUL4" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-LLf9RNcByk" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
-    
-    <!-- Kontener z audio wyśrodkowany na środku strony -->
-    <div class="center-container">
-        <h2>Ulubiona piosenka</h2>
-        <audio controls autoplay>
-            <source src="Joost, Ski Aggu  Otto Waalkes - Friesenjung (Official Video).mp3" type="audio/mp3">
-            Twoja przeglądarka nie obsługuje odtwarzacza audio.
-        </audio>
-    </div>
-
-    <div>
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100038756511179%2Fvideos%2F1039629600784403%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-    </div>
     <nav>
         <a href="#">Strona Rogala</a>
         <a href="https://pis.org.pl/">O Nas</a>
         <a href="https://www.oferteo.pl/zlodziejskie-uslugi-lesne-zul/firma/749181">Usługi</a>
         <a href="https://www.prezydent.pl/kontakt">Kontakt</a>
     </nav>
+    <header>
+        <img src="rogalclick.png" alt="Logo Firmy" style="width: 0px; height: 0px;">
+        <h1>Moje Logo</h1>
+        <img src="rogalclick.png" alt="Zdjęcie" style="width: 300px; height: 200px;">
+        <p>Siema</p>
+    </header>
+    <table class="tabelazdjecia">
+        <section class="video-container">
+        <tr>
+            <td rowspan="2"><iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100038756511179%2Fvideos%2F690985369609329%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe></td>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/JZBKm2BVUL4" frameborder="0" allowfullscreen></iframe></td>
+        </tr>
+        <tr>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/CA8MH56GKiU?si=EDzdfEtk-d1mK8jl" frameborder="0" allowfullscreen></iframe></td>
+        </tr>
+    </section>
+    </table>
     <section>
+        <div class="center-container">
+            <h2>Ulubiona piosenka</h2>
+            <audio controls autoplay>
+                <source src="Joost, Ski Aggu  Otto Waalkes - Friesenjung (Official Video).mp3" type="audio/mp3">
+                Twoja przeglądarka nie obsługuje odtwarzacza audio.
+            </audio>
+        </div>
+        <div class="dol">
         <h2>Strona Główna</h2>
 		<img src="clicklik.png" alt="zaklady" style="width: 1300px; height: 1300px;">
         <p>Tutaj znajdziesz informacje o naszej firmie.</p>
+        </div>
    <!DOCTYPE html>
 <html lang="en">
 <head>
