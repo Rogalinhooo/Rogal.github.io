@@ -1,285 +1,67 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Świąteczna Strona</title>
-    <style>
-        /* style the header */
-        header {
-            text-align: center;
-            background-color: red;
-            padding: 20px;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        
-        /* style the navigation menu */
-        nav {
-            text-align: center;
-            background-color: green;
-        }
-        
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        
-        nav ul li {
-            margin: 10px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-        
-        /* style the kolędy section */
-        #kolędy {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        /* style the photos section */
-        #photos {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
-        }
-        
-        .photo {
-            text-align: center;
-        }
-        
-        /* style the games section */
-        #games {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        /* style the recipes section */
-        #recipes {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 20px;
-        }
-        
-        .recipe {
-            text-align: center;
-        }
-        
-        /* style the contact section */
-        #contact {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        /* style the social media section */
-        #social-media {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        /* style the animations */
-        .animated {
-            animation-duration: 3s;
-            animation-fill-mode: both;
-        }
-        
-        .infinite {
-            animation-iteration-count: infinite;
-        }
-        
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        
-        @keyframes scale {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wesołych Świąt Wielkanocnych!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('obrazek_wielkanocny.jpg'); /* Dodajemy obrazek wielkanocny jako tło */
+      background-size: cover; /* Dopasowujemy obrazek do rozmiaru strony */
+      text-align: center;
+      color: #ffffff; /* Zmieniamy kolor tekstu na biały dla lepszej widoczności na tle obrazka */
+    }
+    #header {
+      background-color: rgba(135, 206, 235, 0.7); /* Dodajemy przezroczystość do koloru nagłówka */
+      padding: 20px;
+      color: white;
+    }
+    #inputContainer {
+      margin-top: 50px;
+      background-color: rgba(255, 255, 255, 0.7); /* Dodajemy przezroczysty biały kolor tła dla lepszej widoczności tekstu */
+      padding: 20px; /* Dodajemy padding do kontenera */
+      border-radius: 15px; /* Zaokrąglamy rogi kontenera */
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #submitButton {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #submitButton:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        Powitanie użytkownika w tematycznej oprawie świątecznej
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#kolędy">Kolędy</a></li>
-            <li><a href="#photos">Galeria zdjęć</a></li>
-            <li><a href="#games">Gry świąteczne</a></li>
-            <li><a href="#recipes">Przepisy</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
-    
-    <section id="kolędy">
-        <h2>Przywitanie od Świętego Mikołaja</h2>
-        <img src="swietymiko.jpg" alt="Święty Mikołaj">
-    </section>
-    
-    <section id="kolędy">
-        <h2>Kolędy</h2>
-        <ul>
-            <li>
-                <h3>Kolęda 1</h3>
-                <p>Tekst kolędy 1</p>
-                <audio controls>
-                    <source src="Gwiazdeczka.mp3" type="audio/mpeg">
-                </audio>
-            </li>
-            <li>
-                <h3>Kolęda 2</h3>
-                <p>Tekst kolędy 2</p>
-                <audio controls>
-                    <source src="Gwiazdeczka.mp3" type="audio/mpeg">
-                </audio>
-            </li>
-            <li>
-                <h3>Kolęda 3</h3>
-                <p>Tekst kolędy 3</p>
-                <audio controls>
-                    <source src="Gwiazdeczka.mp3" type="audio/mpeg">
-                </audio>
-            </li>
-        </ul>
-    </section>
-    
-    <section id="photos">
-        <h2>Galeria zdjęć</h2>
-        <div class="photo">
-            
-            <p>Opis choinki</p>
-        </div>
-        <div class="photo">
-            
-            <p>Opis ozdób</p>
-        </div>
-        <div class="photo">
-            
-            <p>Opis prezentów</p>
-        </div>
-    </section>
-    
-    <section id="games">
-        <h2>Gry świąteczne</h2>
-        <div class="game">
-            <h3>Łamigłówka 1</h3>
-            <p>Opis łamigłówki 1</p>
-        </div>
-        <div class="game">
-            <h3>Krzyżówka 1</h3>
-            <p>Opis krzyżówki 1</p>
-        </div>
-    </section>
-    
-    <section id="recipes">
-        <h2>Przepisy</h2>
-        <div class="recipe">
-            <h3>Smakołyk 1</h3>
-            <ul>
-                <li>Mąkę przesiać na stolnicę, wlać rozpuszczony gorący miód i wymieszać (najlepiej nożem). Ciągle siekając, dodawać kolejno cukier, sodę, kakao i przyprawy, a następnie masło i jedno jajko.
-Dolewać stopniowo (po 1 łyżce) podgrzanego mleka i łączyć składniki ciasta w jednolitą, miękką kulę (dolewamy tyle mleka aby ciasto łatwo się wyrabiało i było plastyczne, można nie wykorzystać całego mleka albo dodać troszkę więcej). Następnie wyrabiać ręką przez około 10 minut.
-Na posypanej mąką stolnicy rozwałkować ciasto na placek o grubości ok. 1/2 cm. Foremkami wykrajać pierniczki. Układać na blasze wyłożonej papierem do pieczenia w odstępach około 2 cm od siebie.
-Wierzch posmarować roztrzepanym jajkiem (niekoniecznie jeśli pierniczki będziemy dekorować) i piec w piekarniku nagrzanym do 180 stopni (góra i dół bez termoobiegu) przez ok. 10 minut.</li>
-                <li>.</li>
-                <li>.</li>
-            </ul>
-            <ol>
-                <li>Mąkę przesiać na stolnicę, wlać rozpuszczony gorący miód i wymieszać (najlepiej nożem). Ciągle siekając, dodawać kolejno cukier, sodę, kakao i przyprawy, a następnie masło i jedno jajko.
-Dolewać stopniowo (po 1 łyżce) podgrzanego mleka i łączyć składniki ciasta w jednolitą, miękką kulę (dolewamy tyle mleka aby ciasto łatwo się wyrabiało i było plastyczne, można nie wykorzystać całego mleka albo dodać troszkę więcej). Następnie wyrabiać ręką przez około 10 minut.
-Na posypanej mąką stolnicy rozwałkować ciasto na placek o grubości ok. 1/2 cm. Foremkami wykrajać pierniczki. Układać na blasze wyłożonej papierem do pieczenia w odstępach około 2 cm od siebie.
-Wierzch posmarować roztrzepanym jajkiem (niekoniecznie jeśli pierniczki będziemy dekorować) i piec w piekarniku nagrzanym do 180 stopni (góra i dół bez termoobiegu) przez ok. 10 minut.</li>
-                <li>.</li>
-                <li>.</li>
-            </ol>
-        </div>
-        <div class="recipe">
-            <h3>Smakołyk 2</h3>
-            <ul>
-                <li>SKŁADNIKI
- OK. 30 SZTUK
-2 szklanki (320 g) mąki pszennej
-2 łyżki miodu
-2/3 szklanki cukru
-1,5 łyżeczki sody oczyszczonej
-1/2 łyżeczki kakao (niekoniecznie)
-20 g (1 torebka) przyprawy piernikowej (najłatwiej gotowej lub DOMOWEJ)
-2 łyżki masła
-1 jajko (+ dodatkowo 1 jajko do posmarowania)
-ok. 1/4 szklanki ciepłego mleka</li>
-                <li>SKŁADNIKI
- OK. 30 SZTUK
-2 szklanki (320 g) mąki pszennej
-2 łyżki miodu
-2/3 szklanki cukru
-1,5 łyżeczki sody oczyszczonej
-1/2 łyżeczki kakao (niekoniecznie)
-20 g (1 torebka) przyprawy piernikowej (najłatwiej gotowej lub DOMOWEJ)
-2 łyżki masła
-1 jajko (+ dodatkowo 1 jajko do posmarowania)
-ok. 1/4 szklanki ciepłego mleka</li>
-                <li>SKŁADNIKI
- OK. 30 SZTUK
-2 szklanki (320 g) mąki pszennej
-2 łyżki miodu
-2/3 szklanki cukru
-1,5 łyżeczki sody oczyszczonej
-1/2 łyżeczki kakao (niekoniecznie)
-20 g (1 torebka) przyprawy piernikowej (najłatwiej gotowej lub DOMOWEJ)
-2 łyżki masła
-1 jajko (+ dodatkowo 1 jajko do posmarowania)
-ok. 1/4 szklanki ciepłego mleka</li>
-            </ul>
-            <ol>
-                <li>Krok 1</li>
-                <li>Krok 2</li>
-                <li>Krok 3</li>
-            </ol>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Dane kontaktowe</h2>
-        <p>Imię i nazwisko</p>
-        <p>Numer telefonu</p>
-        <p>Adres email</p>
-    </section>
-    
-    <section id="social-media">
-        <h2>Social Media</h2>
-        <a href="facebook.com">Facebook</a>
-        <a href="twitter.com">Twitter</a>
-        <a href="instagram.com">Instagram</a>
-    </section>
+  <div id="header">
+    <h1>Wesołych Świąt Wielkanocnych!</h1>
+  </div>
+  <div id="inputContainer">
+    <label for="name">Wpisz swoje imię: </label>
+    <input type="text" id="name" placeholder="Twoje imię...">
+    <br><br>
+    <button id="submitButton">Kliknij</button>
+  </div>
 
-    <script>
-        // Add animations to certain elements
-        var santaImage = document.querySelector("img");
-        santaImage.classList.add("animated", "infinite", "rotate");
-
-        var kolędySection = document.querySelector("#kolędy");
-        kolędySection.classList.add("animated", "infinite", "scale");
-    </script>
+  <script>
+    document.getElementById("submitButton").onclick = function() {
+      var name = document.getElementById("name").value;
+      if (name.trim() !== "") {
+        var gender = name.toLowerCase() === "kuba" ? "chłopaki" : (name.toLowerCase().endsWith("a") ? "dziewczynko" : "chłopaki");
+        // Przekierowanie na stronę z życzeniem
+        window.location.href = "zyczenia.html?name=" + encodeURIComponent(name) + "&gender=" + encodeURIComponent(gender);
+      } else {
+        alert("Proszę wpisać swoje imię.");
+      }
+    };
+  </script>
 </body>
 </html>
