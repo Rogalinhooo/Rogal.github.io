@@ -31,7 +31,7 @@
             padding: 20px;
             margin: 20px 0;
         }
-        #changeColorButton, #animateButton {
+        #changeColorButton, #animateButton, #rotateButton {
             display: block;
             width: 200px;
             height: 50px;
@@ -44,7 +44,7 @@
             border-radius: 25px;
             transition: background-color 0.5s;
         }
-        #changeColorButton:hover, #animateButton:hover {
+        #changeColorButton:hover, #animateButton:hover, #rotateButton:hover {
             background-color: #ff4444;
         }
         @keyframes animation1 {
@@ -55,6 +55,10 @@
         @keyframes animation2 {
             0% {transform: rotate(0deg);}
             50% {transform: rotate(180deg);}
+            100% {transform: rotate(360deg);}
+        }
+        @keyframes rotate {
+            0% {transform: rotate(0deg);}
             100% {transform: rotate(360deg);}
         }
     </style>
@@ -78,9 +82,10 @@
         <div id="footer">Stopka</div>
     </div>
 
-    <!-- Przyciski do zmiany koloru tła i aktywacji animacji -->
+    <!-- Przyciski do zmiany koloru tła, aktywacji animacji i obracania elementów -->
     <div id="changeColorButton">Zmień kolor tła</div>
     <div id="animateButton">Aktywuj losową animację</div>
+    <div id="rotateButton">Obróć elementy</div>
 
     <script>
         document.getElementById('changeColorButton').addEventListener('click', function() {
@@ -92,6 +97,18 @@
             var randomAnimation = animations[Math.floor(Math.random() * animations.length)];
             document.body.style.animationName = randomAnimation;
             document.body.style.animationDuration = '3s';
+        });
+
+        document.getElementById('rotateButton').addEventListener('click', function() {
+            var elements = document.querySelectorAll('#container, #header, #banner, #main-block, #footer');
+            elements.forEach(function(element) {
+                element.style.animation = 'rotate 1s linear infinite';
+            });
+            setTimeout(function() {
+                elements.forEach(function(element) {
+                    element.style.animation = '';
+                });
+            }, 60000); // Stop after 1 minute
         });
     </script>
 </body>
