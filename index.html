@@ -1,67 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wesołych Świąt Wielkanocnych!</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url('obrazek_wielkanocny.jpg'); /* Dodajemy obrazek wielkanocny jako tło */
-      background-size: cover; /* Dopasowujemy obrazek do rozmiaru strony */
-      text-align: center;
-      color: #ffffff; /* Zmieniamy kolor tekstu na biały dla lepszej widoczności na tle obrazka */
-    }
-    #header {
-      background-color: rgba(135, 206, 235, 0.7); /* Dodajemy przezroczystość do koloru nagłówka */
-      padding: 20px;
-      color: white;
-    }
-    #inputContainer {
-      margin-top: 50px;
-      background-color: rgba(255, 255, 255, 0.7); /* Dodajemy przezroczysty biały kolor tła dla lepszej widoczności tekstu */
-      padding: 20px; /* Dodajemy padding do kontenera */
-      border-radius: 15px; /* Zaokrąglamy rogi kontenera */
-    }
-    input[type="text"] {
-      padding: 10px;
-      font-size: 16px;
-    }
-    #submitButton {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    #submitButton:hover {
-      background-color: #45a049;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Twoja Strona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #container {
+            width: 80%;
+            margin: auto;
+        }
+        #header, #footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        #banner {
+            background-color: #ddd;
+            padding: 50px 0;
+            text-align: center;
+        }
+        #main-block {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-  <div id="header">
-    <h1>Wesołych Świąt Wielkanocnych!</h1>
-  </div>
-  <div id="inputContainer">
-    <label for="name">Wpisz swoje imię: </label>
-    <input type="text" id="name" placeholder="Twoje imię...">
-    <br><br>
-    <button id="submitButton">Kliknij</button>
-  </div>
-
-  <script>
-    document.getElementById("submitButton").onclick = function() {
-      var name = document.getElementById("name").value;
-      if (name.trim() !== "") {
-        var gender = name.toLowerCase() === "kuba" ? "chłopaki" : (name.toLowerCase().endsWith("a") ? "dziewczynko" : "chłopaki");
-        // Przekierowanie na stronę z życzeniem
-        window.location.href = "zyczenia.html?name=" + encodeURIComponent(name) + "&gender=" + encodeURIComponent(gender);
-      } else {
-        alert("Proszę wpisać swoje imię.");
-      }
-    };
-  </script>
+    <!-- KONTENER CAŁEJ STRONY -->
+    <div id="container">
+        <!-- bloki logo i menu -->
+        <div id="header">
+            <div id="logo">Logo</div>
+            <div id="menu">Menu</div>
+        </div>
+        
+        <!-- BANER -->
+        <div id="banner">Baner</div>
+        
+        <!-- BLOK GŁÓWNY -->
+        <div id="main-block">Blok główny</div>
+        
+        <!-- STOPKA -->
+        <div id="footer">Stopka</div>
+    </div>
 </body>
 </html>
