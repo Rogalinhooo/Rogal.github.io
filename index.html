@@ -28,6 +28,17 @@
             padding: 20px;
             margin: 20px 0;
         }
+        #changeColorButton {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            background-color: #ff0000;
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -48,5 +59,14 @@
         <!-- STOPKA -->
         <div id="footer">Stopka</div>
     </div>
+
+    <!-- Przycisk do zmiany koloru tła -->
+    <div id="changeColorButton">Zmień kolor tła</div>
+
+    <script>
+        document.getElementById('changeColorButton').addEventListener('click', function() {
+            document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        });
+    </script>
 </body>
 </html>
