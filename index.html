@@ -7,10 +7,12 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+            transition: background-color 1s;
         }
         #container {
             width: 80%;
             margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         #header, #footer {
             background-color: #333;
@@ -22,6 +24,7 @@
             background-color: #ddd;
             padding: 50px 0;
             text-align: center;
+            font-size: 2em;
         }
         #main-block {
             background-color: #fff;
@@ -38,6 +41,11 @@
             text-align: center;
             line-height: 50px;
             cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.5s;
+        }
+        #changeColorButton:hover, #animateButton:hover {
+            background-color: #ff4444;
         }
         @keyframes animation1 {
             0% {background-color: red;}
