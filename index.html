@@ -1,115 +1,44 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Twoja Strona</title>
     <style>
         body {
+            background-color: black;
+            color: white;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            transition: background-color 1s;
         }
-        #container {
-            width: 80%;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        #header, #footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        #banner {
-            background-color: #ddd;
-            padding: 50px 0;
-            text-align: center;
-            font-size: 2em;
-        }
-        #main-block {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        #changeColorButton, #animateButton, #rotateButton {
-            display: block;
-            width: 200px;
-            height: 50px;
-            margin: 20px auto;
-            background-color: #ff0000;
-            color: #ffffff;
-            text-align: center;
-            line-height: 50px;
-            cursor: pointer;
-            border-radius: 25px;
-            transition: background-color 0.5s;
-        }
-        #changeColorButton:hover, #animateButton:hover, #rotateButton:hover {
-            background-color: #ff4444;
-        }
-        @keyframes animation1 {
-            0% {background-color: red;}
-            50% {background-color: blue;}
-            100% {background-color: green;}
-        }
-        @keyframes animation2 {
-            0% {transform: rotate(0deg);}
-            50% {transform: rotate(180deg);}
-            100% {transform: rotate(360deg);}
-        }
-        @keyframes rotate {
-            0% {transform: rotate(0deg);}
-            100% {transform: rotate(360deg);}
+        #result {
+            border: 2px solid red;
+            padding: 30px;
+            margin-top: 20px;
+            color: orange;
         }
     </style>
 </head>
 <body>
-    <!-- KONTENER CAŁEJ STRONY -->
-    <div id="container">
-        <!-- bloki logo i menu -->
-        <div id="header">
-            <div id="logo">Logo</div>
-            <div id="menu">Menu</div>
-        </div>
-        
-        <!-- BANER -->
-        <div id="banner">Baner</div>
-        
-        <!-- BLOK GŁÓWNY -->
-        <div id="main-block">Blok główny</div>
-        
-        <!-- STOPKA -->
-        <div id="footer">Stopka</div>
-    </div>
-
-    <!-- Przyciski do zmiany koloru tła, aktywacji animacji i obracania elementów -->
-    <div id="changeColorButton">Zmień kolor tła</div>
-    <div id="animateButton">Aktywuj losową animację</div>
-    <div id="rotateButton">Obróć elementy</div>
+    <h1>Pytanie jak oceniasz swoją wiedzę?</h1>
+    <input id="knowledge" type="number" min="0" max="100" placeholder="Podaj procent">
+    <button onclick="checkKnowledge()">Sprawdź mnie</button>
+    <div id="result"></div>
 
     <script>
-        document.getElementById('changeColorButton').addEventListener('click', function() {
-            document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-        });
-
-        document.getElementById('animateButton').addEventListener('click', function() {
-            var animations = ['animation1', 'animation2'];
-            var randomAnimation = animations[Math.floor(Math.random() * animations.length)];
-            document.body.style.animationName = randomAnimation;
-            document.body.style.animationDuration = '3s';
-        });
-
-        document.getElementById('rotateButton').addEventListener('click', function() {
-            var elements = document.querySelectorAll('#container, #header, #banner, #main-block, #footer');
-            elements.forEach(function(element) {
-                element.style.animation = 'rotate 1s linear infinite';
-            });
-            setTimeout(function() {
-                elements.forEach(function(element) {
-                    element.style.animation = '';
-                });
-            }, 60000); // Stop after 1 minute
-        });
+        function checkKnowledge() {
+            var knowledge = document.getElementById('knowledge').value;
+            var result = document.getElementById('result');
+            if (knowledge >= 100) {
+                result.innerHTML = '<h1>6</h1>';
+            } else if (knowledge >= 90) {
+                result.innerHTML = '<h1>5</h1>';
+            } else if (knowledge >= 75) {
+                result.innerHTML = '<h1>4</h1>';
+            } else if (knowledge >= 50) {
+                result.innerHTML = '<h1>3</h1>';
+            } else if (knowledge >= 30) {
+                result.innerHTML = '<h1>2</h1>';
+            } else {
+                result.innerHTML = '<h1>1</h1>';
+            }
+        }
     </script>
 </body>
 </html>
