@@ -20,7 +20,7 @@
             background-color: blue;
             width: 30%;
             float: left;
-            height: 300px;
+            height: calc(100vh - 50px); /* Ustawienie wysokości na całą dostępną przestrzeń minus wysokość nagłówka */
             color: white;
             text-align: center;
         }
@@ -28,17 +28,15 @@
             background-color: green;
             width: 70%;
             float: left;
-            height: 300px;
+            height: calc(100vh - 50px); /* Ustawienie wysokości na całą dostępną przestrzeń minus wysokość nagłówka */
             color: white;
             text-align: center;
         }
     </style>
 </head>
 <body>
-    <header>HEADER</header>
-    <div class="left-section">SEKCJA LEWA</div>
-    <div class="right-section">SEKCJA PRAWA</div>
-    <footer id="stopka"
-    </footer>
-    </body>
-    </html>
+    <header>HEADER WYSOKOŚĆ 50PX</header>
+    <div class="left-section">SEKCJA SZEROKOŚĆ: 30%</div>
+    <div class="right-section">SEKCJA SZEROKOŚĆ: 70%</div>
+</body>
+</html>
