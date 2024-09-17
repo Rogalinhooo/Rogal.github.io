@@ -1,138 +1,80 @@
-<table border="1">
-  <tr>
-    <td rowspan="2">Komórka 1</td>
-    <td>Komórka 2</td>
-    <td>Komórka 3</td>
-  </tr>
-  <tr>
-    <td>Komórka 4</td>
-    <td>Komórka 5</td>
-  </tr>
-  <tr>
-    <td>Komórka 6</td>
-    <td>Komórka 7</td>
-    <td>Komórka 8</td>
-  </tr>
-</table>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Linki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Zdjęcie</th>
+            <th>Link 1</th>
+            <th>Link 2</th>
+            <th>Link 3</th>
+        </tr>
+        <tr>
+            <td><img src="https://example.com/image1.jpg" alt="Zdjęcie 1"></td>
+            <td><a href="https://docs.google.com/presentation/d/1uTv0Wg-fP0zjjZ3MOE1gHaamLC_dXLIHztun3ODn224/edit#slide=id.p">Podstawy Html</a></td>
+            <td><a href="https://rogalinhooo.github.io/Rogal.github.io/?authuser=1">Komórki</a></td>
+            <td><a href="https://docs.google.com/presentation/d/1ryufYFqBmeKntJDeyloZ_z679R_N6rsax4JDr9Hbtqo/edit#slide=id.p">Formatowanie HTML</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://example.com/image2.jpg" alt="Zdjęcie 2"></td>
+            <td><a href="https://example.com/link4">Link 4</a></td>
+            <td><a href="https://example.com/link5">Link 5</a></td>
+            <td><a href="https://example.com/link6">Link 6</a></td>
+        </tr>
+        <tr>
+            <td><img src="https://example.com/image3.jpg" alt="Zdjęcie 3"></td>
+            <td><a href="https://example.com/link7">Link 7</a></td>
+            <td><a href="https://example.com/link8">Link 8</a></td>
+            <td><a href="https://example.com/link9">Link 9</a></td>
+        </tr>
+    </table>
+</body>
+</html>
 
-<table border="1">
-  <tr>
-    <td>Komórka 1</td>
-    <td>Komórka 2</td>
-    <td>Komórka 3</td>
-    <td>Komórka 4</td>
-  </tr>
-  <tr>
-    <td>Komórka 5</td>
-    <td colspan="2">Połączone Komórki</td>
-    <td>Komórka 6</td>
-  </tr>
-  <tr>
-    <td>Komórka 7</td>
-    <td>Komórka 8</td>
-    <td>Komórka 9</td>
-    <td>Komórka 10</td>
-  </tr>
-</table>
-
-<table border="1">
-  <tr>
-    <td colspan="2">Połączone Komórki</td>
-    <td>Komórka 3</td>
-    <td>Komórka 4</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Komórka 1</td>
-    <td>Komórka 5</td>
-    <td>Komórka 6</td>
-    <td>Komórka 7</td>
-  </tr>
-  <tr>
-    <td>Komórka 8</td>
-    <td>Komórka 9</td>
-    <td>Komórka 10</td>
-  </tr>
-  <tr>
-    <td>Komórka 11</td>
-    <td>Komórka 12</td>
-    <td>Komórka 13</td>
-    <td>Komórka 14</td>
-  </tr>
-</table>
-
-<table border="1">
-  <tr>
-    <th>Produkt</th>
-    <th>Cena</th>
-    <th>Ilość</th>
-    <th>Opis</th>
-  </tr>
-  <tr>
-    <td>Produkt 1</td>
-    <td>10 PLN</td>
-    <td>5</td>
-    <td>Opis 1</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Produkt 2</td>
-    <td>20 PLN</td>
-    <td>3</td>
-    <td>Opis 2</td>
-  </tr>
-  <tr>
-    <td>30 PLN</td>
-    <td>2</td>
-    <td>Opis 3</td>
-  </tr>
-  <tr>
-    <td>Produkt 3</td>
-    <td colspan="2">40 PLN</td>
-    <td>Opis 4</td>
-  </tr>
-  <tr>
-    <td>Produkt 4</td>
-    <td>50 PLN</td>
-    <td>1</td>
-    <td>Opis 5</td>
-  </tr>
-</table>
-
-<table border="1">
-  <tr>
-    <td colspan="3">Połączone Komórki</td>
-    <td>Komórka 4</td>
-    <td>Komórka 5</td>
-  </tr>
-  <tr>
-    <td>Komórka 6</td>
-    <td>Komórka 7</td>
-    <td>Komórka 8</td>
-    <td>Komórka 9</td>
-    <td>Komórka 10</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Komórka 1</td>
-    <td>Komórka 11</td>
-    <td>Komórka 12</td>
-    <td>Komórka 13</td>
-    <td>Komórka 14</td>
-  </tr>
-  <tr>
-    <td>Komórka 15</td>
-    <td>Komórka 16</td>
-    <td>Komórka 17</td>
-    <td>Komórka 18</td>
-  </tr>
-  <tr>
-    <td>Komórka 19</td>
-    <td colspan="3">Połączone Komórki</td>
-    <td>Komórka 20</td>
-  </tr>
-  <tr>
-    <td>Komórka 21</td>
-    <td>Komórka 22</td>
-    <td>Komórka 23</td>
-    <td>Komórka 24</td>
-    <td>Komórka 25</td>
-  </tr>
-</table>
