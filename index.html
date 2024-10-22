@@ -1,91 +1,70 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marginesy i Kolory LGBT</title>
+    <title>Combined Grid Layout</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+        .grid-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 30% 1fr 1fr 70%;
+            gap: 10px;
+            height: 100vh;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px; /* Zadanie 1 */
-        }
-        .double-margin {
-            margin: 20px 10px; /* Zadanie 2 */
-        }
-        .triple-margin {
-            margin: 20px 10px 30px 10px; /* Zadanie 3 */
-        }
-        .quadruple-margin {
-            margin: 20px 30px 40px 50px; /* Zadanie 4 */
-        }
-        .selected-margins {
-            margin-top: 20px; /* Zadanie 5 */
-            margin-right: 30px;
-            margin-bottom: 40px;
-            margin-left: 50px;
-        }
-        .lgbt-colors {
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            color: white;
+        .header {
+            grid-column: 1 / -1;
+            padding: 20px;
+            background-color: lightblue;
             text-align: center;
-            padding: 10px;
-            margin-bottom: 20px;
+        }
+        .left-column {
+            grid-column: 1 / 2;
+            padding: 20px;
+            background-color: lightgrey;
+            text-align: center;
+        }
+        .middle-column {
+            grid-column: 2 / 3;
+            padding: 20px;
+            background-color: lightcoral;
+            text-align: center;
+        }
+        .right-column {
+            grid-column: 3 / 4;
+            padding: 20px;
+            background-color: lightgreen;
+            text-align: center;
+        }
+        .main-content {
+            grid-column: 4 / 5;
+            padding: 20px;
+            background-color: lightcoral;
+            text-align: center;
+        }
+        .sidebar {
+            grid-column: 3 / 4;
+            padding: 20px;
+            background-color: lightgreen;
+            text-align: center;
+        }
+        .footer {
+            grid-column: 1 / -1;
+            padding: 20px;
+            background-color: lightgrey;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="lgbt-colors">Kolory LGBT</div>
-    <table class="double-margin">
-        <tr>
-            <th>Kolumna 1</th>
-            <th>Kolumna 2</th>
-        </tr>
-        <tr>
-            <td>Komórka 1</td>
-            <td>Komórka 2</td>
-        </tr>
-    </table>
-    <table class="triple-margin">
-        <tr>
-            <th>Kolumna 1</th>
-            <th>Kolumna 2</th>
-        </tr>
-        <tr>
-            <td>Komórka 1</td>
-            <td>Komórka 2</td>
-        </tr>
-    </table>
-    <table class="quadruple-margin">
-        <tr>
-            <th>Kolumna 1</th>
-            <th>Kolumna 2</th>
-        </tr>
-        <tr>
-            <td>Komórka 1</td>
-            <td>Komórka 2</td>
-        </tr>
-    </table>
-    <table class="selected-margins">
-        <tr>
-            <th>Kolumna 1</th>
-            <th>Kolumna 2</th>
-        </tr>
-        <tr>
-            <td>Komórka 1</td>
-            <td>Komórka 2</td>
-        </tr>
-    </table>
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="left-column">Left Column (30%)</div>
+        <div class="middle-column">Middle Column (1/4)</div>
+        <div class="right-column">Right Column (1/4)</div>
+        <div class="main-content">Main Content (70%)</div>
+        <div class="sidebar">Sidebar (30%)</div>
+        <div class="footer">Footer</div>
+    </div>
 </body>
 </html>
-
-
-
