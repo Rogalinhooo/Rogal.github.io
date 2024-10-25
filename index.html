@@ -1,70 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combined Grid Layout</title>
+    <title>Stylish Menu Example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Krot&display=swap" rel="stylesheet">
     <style>
-        .grid-container {
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            grid-template-columns: 30% 1fr 1fr 70%;
-            gap: 10px;
+        body {
+            font-family: 'Krot', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
         }
-        .header {
-            grid-column: 1 / -1;
-            padding: 20px;
-            background-color: lightblue;
-            text-align: center;
+        .menu {
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px 40px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
         }
-        .left-column {
-            grid-column: 1 / 2;
-            padding: 20px;
-            background-color: lightgrey;
-            text-align: center;
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
         }
-        .middle-column {
-            grid-column: 2 / 3;
-            padding: 20px;
-            background-color: lightcoral;
-            text-align: center;
-        }
-        .right-column {
-            grid-column: 3 / 4;
-            padding: 20px;
-            background-color: lightgreen;
-            text-align: center;
-        }
-        .main-content {
-            grid-column: 4 / 5;
-            padding: 20px;
-            background-color: lightcoral;
-            text-align: center;
-        }
-        .sidebar {
-            grid-column: 3 / 4;
-            padding: 20px;
-            background-color: lightgreen;
-            text-align: center;
-        }
-        .footer {
-            grid-column: 1 / -1;
-            padding: 20px;
-            background-color: lightgrey;
-            text-align: center;
+        .menu a:hover {
+            background-color: #333;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <div class="grid-container">
-        <div class="header">Header</div>
-        <div class="left-column">Left Column (30%)</div>
-        <div class="middle-column">Middle Column (1/4)</div>
-        <div class="right-column">Right Column (1/4)</div>
-        <div class="main-content">Main Content (70%)</div>
-        <div class="sidebar">Sidebar (30%)</div>
-        <div class="footer">Footer</div>
-    </div>
+    <nav class="menu">
+        <a href="#start">START</a>
+        <a href="#projekty">PROJEKTY</a>
+        <a href="#kontakt">KONTAKT</a>
+    </nav>
 </body>
 </html>
